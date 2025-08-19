@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thermodynamics Pulse Art | MSc Zoology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Thermodynamics Pulse Art</h1>
+    <div class="author">
+      Harini.S <span>|</span> 2401712077006 <span>|</span> II MSc Zoology
+    </div>
+    <div id="instructions" class="instructions">
+      Place the <strong>pad of your finger</strong> gently and fully on your phone’s <strong>front camera lens</strong>, then tap Start.<br />
+      <span class="tip">Use steady pressure and good lighting. Hold still during measurement.</span>
+    </div>
+    <div id="bpmDisplay" class="bpm-readout">Pulse: -- BPM</div>
+  </header>
+  
+  <main class="card-container">
+    <section class="card main-card">
+      <h2>Thermodynamics Pattern</h2>
+      <canvas id="art"></canvas>
+    </section>
+    <section class="card main-card">
+      <h2>Pulse Waveform</h2>
+      <canvas id="wave"></canvas>
+    </section>
+    <section id="infoCard" class="card info-card" tabindex="0">
+      <button id="infoToggle" aria-expanded="false" aria-controls="infoContent">Show Scientific Info</button>
+      <div id="infoContent" class="info-content" hidden>
+        <h3>The Science Behind This App</h3>
+        <ul>
+          <li><strong>Usage:</strong> Cover the front camera fully with your finger. Don't move or press hard. Allow time for pulse detection.</li>
+          <li><strong>Photoplethysmography (PPG):</strong> Detects changes in blood volume via light absorption using the camera.</li>
+          <li><strong>Thermodynamics Visualization:</strong> BPM controls the pattern states — solid (low), liquid (normal), gas (high) — showing energy and entropy.</li>
+          <li><strong>Entropy:</strong> Represents disorder increasing with pulse rate, reflected as more complex visuals.</li>
+          <li><strong>Biophysical Education:</strong> Connects heart biology and physics interactively through art.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  <div class="controls">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn" disabled>Stop</button>
+  </div>
+  
+  <video id="camera" autoplay muted playsinline style="display:none;"></video>
+
+  <script src="script.js"></script>
+</body>
+</html>
